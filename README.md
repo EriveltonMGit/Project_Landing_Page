@@ -1,11 +1,11 @@
 # LANDING PAGE_CHURASCARIA
 **Atenção!** site em construção.
-![Descrição da Imagem]()
+![Descrição da Imagem](https://github.com/EriveltonMGit/Project_Landing_Page/raw/main/src/assets/imagens/img_capa.png)
 
 Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
 
 
-&nbsp;<a href="https://ifoome.netlify.app/">
+&nbsp;<a href="https://landingchurascaria.netlify.app/">
 Link para o projeto 
 </a>&nbsp;
 
