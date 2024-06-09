@@ -1,1 +1,132 @@
-/* You can add global styles to this file, and also import other style files */
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$landing_page_churascaria-primary: mat.define-palette(mat.$indigo-palette);
+$landing_page_churascaria-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$landing_page_churascaria-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$landing_page_churascaria-theme: mat.define-light-theme((
+  color: (
+    primary: $landing_page_churascaria-primary,
+    accent: $landing_page_churascaria-accent,
+    warn: $landing_page_churascaria-warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($landing_page_churascaria-theme);
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    overflow-X: hidden;
+    scroll-behavior: smooth;
+    font-family: Poppins-Light, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    font: inherit;
+    background-color: var(--header-bk);
+    scroll-behavior: smooth;
+}
+
+
+html {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+@font-face {
+    font-family: Merich;
+    src: url('assets/fonts/Merich/Merich.otf');
+  
+} 
+@font-face {
+    font-family: Blacky;
+    src: url('assets/fonts/Blacky/TheNextFont.ttf');
+}
+
+@font-face{
+  font-family: Poppins-Light;
+    src: url('assets/fonts/popins/Poppins-Light.ttf');
+}  
+
+
+:root {
+ 
+    --bkColor: #fffdf7;
+    --color-black: #212121;
+    --color-black-heavy: #000000;
+    --color-text-out: #90908e;
+  
+    --color-white: #ffffff;
+    --color-red: #e74c3c;
+    --color-green: #2ecc71;
+    --color-separate: #cccccc;
+    --color-green: #37a34b;
+    // ----------
+    --color-titulo: #2f1c6a;
+    --color-textos: #6f47e7;
+    --color-roxo: #13131f;
+    --color-pinck: #fbebe2;
+    --color-blue: #e8f0fe;
+    --blue-clean:#6cc2c5;
+    // COLORS UTILIZADAS
+    --header-bk: #111214;
+    --color-text: #aaa6a6;
+    --color-primary: #ff5701;
+    --color-secundary: #fffd6b;
+    
+
+}
+
+
+::-webkit-scrollbar {
+    width: 1vw;
+    background-color: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--header-bk);
+
+
+    height: 5vh;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #212529;
+
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
