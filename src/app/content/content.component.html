@@ -1,4 +1,6 @@
-<section id="header_container">
+ 
+<section id="home">
+
     <div id="video_haeder">
         <video src="assets/video/video_header_bk.mp4" autoplay loop muted></video>
     </div>
@@ -22,9 +24,10 @@
         <ul id="ul_header_principal">
             <img class="logo_header" src="assets/imagens/bk-header/logo.png" alt="">
             <div>
-                <li><a href="#header_container">HOME</a></li>
-                <li><a href="#cards">ABOUT US</a></li>
-                <li><a href="">MENU</a></li>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#sobrenos">ABOUT US</a></li>
+                <li><a href="#pizza">PIZZA</a></li>
+                <li><a href="#menu_cardapio">MENU</a></li>  
                 <li><a href="">GALERY</a></li>
                 <li><a href="">CONTACTS</a></li>
 
@@ -64,8 +67,8 @@
 
 <!-- __________________-SECTION-2______________ -->
 
-<section id="section_2">
-    <div id="cards">
+<section id="sobrenos">
+    <div id="cards" >
         <div class="card" id="card-1">
             <img src="assets/imagens/icon/chef.png" alt="">
             <h4>EXPERIENCED CHEFS
@@ -102,15 +105,15 @@
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi sit nihil sed omnis necessitatibus magnam debitis soluta, quo delectus eveniet et vitae facere at quas, tempore repellat beatae, odio hic!</p>
             <main id="span_conometragem">
                 <div class="contador">
-                    <p id="cont-1"></p>
+                    <p class="counter" data-target="150">0</p>
                     <p>+</p>
                 </div>
                 <div class="contador">
-                    <p id="cont-2"></p>
+                    <p class="counter" data-target="100">0</p>
                     <p>%</p>
                 </div>
                 <div class="contador">
-                    <p id="cont-3"></p>
+                    <p class="counter" data-target="25">0</p>
                     <p>+</p>
                 </div>
             
@@ -141,17 +144,94 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button> -->
+              
             </div>
-            
+
+          
+             
 
         </div>
-        
-
-      
     </section>
+
+
+ 
 
 
 
 
 
 </section>
+
+
+   <!-- PIZZA -->
+   <section id="pizza">
+
+    <!-- MENU LATERAL -->
+     <nav id="nav-pizza">
+        <button onclick="abrir_fatia_pizza()"><img src="assets/imagens/section_pizza/icons/fatia_.png" alt=""></button>
+        <button onclick="promo()"><img src="assets/imagens/section_pizza/icons/promo.png" alt=""></button>
+        <button onclick="abrir_pizza_fa()"><img src="assets/imagens/section_pizza/icons/pizza_ent.png" alt=""></button>
+        <button onclick="abrir_combo_pizza()"><img src="assets/imagens/section_pizza/icons/combo.png" alt=""></button>
+        <button onclick="abir_card_entrega()"><img src="assets/imagens/section_pizza/icons/pizza_entrega.png" alt=""></button>
+    
+
+     </nav>
+     <!-- CARD PIZZA -->
+
+     <div id="fatia_pizza">
+        <button  onclick="fechar()">x</button>
+        <h1>Em desenvolvimento</h1>
+
+     </div>
+     <!--CARD PROMO -->
+
+     <div id="card_promo">
+        <button  onclick="fechar_promo()">x</button>
+        <h1>Em desenvolvimento</h1>
+
+     </div>
+     <!-- CARD PIZZA FAMÍLIA -->
+     <div id="pizza_familia">
+        <button  onclick="pizza_fa_close()">x</button>
+        <h1>Em desenvolvimento</h1>
+
+     </div>
+     <!-- CARD COMBO PIZZA -->
+     <div id="combo_pizza">
+        <button  onclick="combo_pizza_close()">x</button>
+        <h1>Em desenvolvimento</h1>
+
+     </div>
+     <!-- CARD ENTREGA -->
+     <div id="entrega_pizza">
+        <button  onclick="entrega_pizza_close()">x</button>
+        <h1>Em desenvolvimento</h1>
+
+     </div>
+        
+   </section>
+
+   <!-- SECTION MENU -->
+
+   <section id="menu_cardapio">
+    <!-- MENU  -->
+     <nav id="menu_opcoes">
+        <img class="img_menu_op" src="assets/imagens/bk-header/logo.png" alt="">
+        <ul>
+            <li><button>STEAK</button></li>
+            <li><button>RIBS</button></li>
+            <li><button>SAUSAGE</button></li>
+            <li><button>CHIKEN</button></li>
+            <li><button>DISSERTS</button></li>
+            <li><button>DRINKS</button></li>
+        </ul>
+
+
+     </nav>
+     <div id="op_selecioados">
+        <h1>Em desenvolvimento</h1>
+
+     </div>
+
+
+   </section>
