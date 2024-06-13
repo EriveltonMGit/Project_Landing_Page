@@ -487,7 +487,7 @@
 
 
 
-// __________PIZZA____________-
+// __________PIZZA SECTION____________-
 
 #pizza {
 
@@ -504,24 +504,35 @@
     align-self: center;
     justify-content: center;
 }
+// texto_2_pizzaria
+#texto_2_pizzaria{
+    width: 80%;
+    height: 50%;
+    border: 1px solid red;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+    margin-top: 10%;
+    border-radius: 5px;
+
+}
 
 // nav-pizza
 #nav-pizza {
     display: flex;
     align-self: center;
     justify-content: space-around;
-    flex-direction: column;
-    width: 7%;
-    height: 80%;
-    margin-left: 0.1vw;
+    width: 60%;
+    height: 20%;
+    margin-left: 2vw;
     position: absolute;
     left: 0px;
+   margin-bottom: -25%;
     margin-top: 5%;
     transition: 0.5s ease-in-out;
     padding: 1rem;
     z-index: 2;
-    // animation-name: slide_from_left_nav_lateral;
-    // animation-duration: 1s;
+    animation-name: slide_from_left_nav_lateral;
+    animation-duration: 1s;
 
 }
 
@@ -536,18 +547,20 @@
 }
 
 #nav-pizza button {
-    padding: 1rem;
-    
-    background-color: inherit;
+    padding: 0.5rem;
     border: none;
     color: white;
-
-    border-radius: 50%;
+    border-radius: 5px;
     mix-blend-mode: screen;
     display: flex;
     align-self: center;
-    justify-content: space-around;
-
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.568);
+    width: 15%;
+    height: 100%;
+   
+    background-color: #11121463;
+    backdrop-filter: blur(10px);
 
 }
 
@@ -575,18 +588,22 @@
     width: 3.5vw;
     object-fit: cover;
     transition: 0.5s ease-in-out;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+ 
 
 }
 
 #nav-pizza button:nth-child(3) {
-    animation: pulsar 2s infinite;
-    border: 0.5px solid rgba(155, 149, 149, 0.322);
+    animation: pulsar 3s infinite;
+    border: 1px solid rgba(255, 255, 255, 0.568);
 }
 
 // fatia_pizza
 #fatia_pizza {
     width: 80%;
-    height: 70vh;
+    height: 50vh;
     border: 1px solid rgba(255, 255, 255, 0.356);
     backdrop-filter: blur(5px);
     position: absolute;
@@ -597,6 +614,7 @@
     animation-name: slide_from_bottom;
     animation-duration: 1s;
     color: white;
+    
 }
 
 #fatia_pizza button {
@@ -622,7 +640,7 @@
 // card_promo
 #card_promo {
     width: 80%;
-    height: 70vh;
+    height: 50vh;
     border: 1px solid rgba(255, 255, 255, 0.356);
     backdrop-filter: blur(5px);
     position: absolute;
@@ -648,7 +666,7 @@
 
 #pizza_familia {
     width: 80%;
-    height: 70vh;
+    height: 50vh;
     border: 1px solid rgba(255, 255, 255, 0.356);
     backdrop-filter: blur(5px);
     position: absolute;
@@ -673,7 +691,7 @@
 
 #combo_pizza {
     width: 80%;
-    height: 70vh;
+    height: 50vh;
     border: 1px solid rgba(255, 255, 255, 0.356);
     backdrop-filter: blur(5px);
     position: absolute;
@@ -699,7 +717,7 @@
 
 #entrega_pizza {
     width: 80%;
-    height: 70vh;
+    height: 50vh;
     border: 1px solid rgba(255, 255, 255, 0.356);
     backdrop-filter: blur(5px);
     position: absolute;

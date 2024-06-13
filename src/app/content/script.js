@@ -186,12 +186,12 @@ window.addEventListener('scroll', function () {
     if (cardPosition < viewportHeight) {
         // O elemento está dentro da viewport, então mostra o card
         card.style.opacity = '1';
-        card.style.transform = 'translateX(5%)';
+        card.style.transform = 'translateX(2%)';
         card.style.transition = '2s ';
     } else {
         // O elemento está fora da viewport, então esconde o card
         card.style.opacity = '0';
-        card.style.transform = 'translateX(-100%)';
+        card.style.transform = 'translateX(-10%)';
         card.style.transition = '2s ';
     }
 });
