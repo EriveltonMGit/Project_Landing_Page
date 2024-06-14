@@ -1,6 +1,7 @@
 
 
 
+
 // _____________EFEITO ESCRITA______________--
 document.addEventListener("DOMContentLoaded", function () {
     const line1 = "GRILL RESTAURANT";
@@ -177,6 +178,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // _______________________ANIMAÇÕES CARD PIZZA ____________________--
 
+
+// ANIMAÇÃO PARA FECHAR TODOS CARDS AO TOCAR FORA DELE
+
+function fecharCards() {
+
+    let fatia_pizza = document.getElementById(`fatia_pizza`)
+    let promo = document.getElementById(`card_promo`)
+    let pizza_familia = document.getElementById(`pizza_familia`)
+    let combo_pizza = document.getElementById(`combo_pizza`)
+    let entrega_pizza = document.getElementById(`entrega_pizza`)
+
+
+    if (fatia_pizza.style.display == 'flex' || promo.style.display == 'flex' ||
+        pizza_familia.style.display == 'flex' || combo_pizza.style.display == 'flex'
+        ||  entrega_pizza.style.display == 'flex'
+    ) {
+        fatia_pizza.style.display = 'none'
+        promo.style.display = 'none'
+        pizza_familia.style.display = 'none'
+        combo_pizza.style.display = 'none'
+        entrega_pizza.style.display  = 'none'
+      
+
+        
+    }
+   
+}
+
+
+
+
+
 //  EFEITO MOSTRAR MENU LATERAL
 window.addEventListener('scroll', function () {
     let card = document.getElementById('nav-pizza');
@@ -206,14 +239,17 @@ function abrir_fatia_pizza() {
     let combo_pizza = document.getElementById(`combo_pizza`).style.display = 'none'
     let entrega_pizza = document.getElementById(`entrega_pizza`).style.display = 'none'
     let fatia_pizza = document.getElementById(`fatia_pizza`)
+
     if (fatia_pizza.style.display === 'none' || fatia_pizza.style.display === '') {
         fatia_pizza.style.display = 'flex'
         fatia_pizza.style.alignItems = 'center'
         fatia_pizza.style.justifyContent = 'center'
-        
+
     }
     else {
+
         fatia_pizza.style.display = 'none'
+
     }
 }
 
@@ -224,9 +260,12 @@ function fechar() {
         fatia_pizza.style.display = 'flex'
     }
     else {
+
         fatia_pizza.style.display = 'none'
     }
 }
+
+
 
 // 2 CARD PROMO
 function promo() {

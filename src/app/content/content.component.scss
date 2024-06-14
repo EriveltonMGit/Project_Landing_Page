@@ -492,7 +492,7 @@
 #pizza {
 
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     // position: absolute;
     left: 0px;
     margin-top: 10%;
@@ -506,14 +506,45 @@
 }
 // texto_2_pizzaria
 #texto_2_pizzaria{
-    width: 80%;
-    height: 50%;
-    border: 1px solid red;
-    margin: 0 auto;
-    backdrop-filter: blur(10px);
-    margin-top: 10%;
+    width: 60%;
+    height: 40%;
+    margin-left: -30%;
+    margin-top: 2%;
     border-radius: 5px;
+    display: flex;
+    align-self: center;
+    justify-content:center;
+    flex-direction: column;
+    margin-bottom: 2%;
 
+}
+
+
+#texto_2_pizzaria h1{
+    color: white;
+    font-family: Blacky;
+    font-size: 5vw;
+    line-height: 1.3;
+    flex-wrap: wrap;
+  
+}
+#texto_2_pizzaria button{
+    width: 20%;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #fcd600;
+    border: none;
+    cursor: pointer;
+    font-family: Blacky;
+    font-size: 1vw;
+    color: #000;
+    transition: 0.5s ease-in-out;
+    z-index: 1;
+
+}
+#texto_2_pizzaria button:hover{
+    color: white;
+    box-shadow: 5px 5px 1rem black;
 }
 
 // nav-pizza
@@ -533,6 +564,7 @@
     z-index: 2;
     animation-name: slide_from_left_nav_lateral;
     animation-duration: 1s;
+    
 
 }
 
@@ -558,8 +590,7 @@
     border: 1px solid rgba(255, 255, 255, 0.568);
     width: 15%;
     height: 100%;
-   
-    background-color: #11121463;
+    background-color: #111214;
     backdrop-filter: blur(10px);
 
 }
@@ -570,19 +601,26 @@
     scale: 1.3;
 }
 
-@keyframes pulsar {
-    0% {
-        transform: scale(1);
-    }
+// @keyframes pulsar {
+//     0% {
+//         transform: scale(1);
+//     }
 
-    50% {
-        transform: scale(1.3);
-    }
+//     50% {
+//         transform: scale(1.3);
+//     }
 
-    100% {
-        transform: scale(1);
-    }
+//     100% {
+//         transform: scale(1);
+//     }
+// }
+#todos_cards_pizza{
+    width: 100%;
+    height: 110%;
+    position: absolute;
+   
 }
+
 
 #nav-pizza button img {
     width: 3.5vw;
@@ -591,6 +629,7 @@
     display: flex;
     align-self: center;
     justify-content: center;
+    backdrop-filter: blur(10px);
  
 
 }
@@ -614,6 +653,8 @@
     animation-name: slide_from_bottom;
     animation-duration: 1s;
     color: white;
+    z-index: 1;
+    
     
 }
 
@@ -625,19 +666,41 @@
 
 }
 
+
+// @keyframes slide_from_bottom {
+//     0% {
+//         transform: translateY(-100%);
+
+//     }
+
+//     100% {
+//         transform: translateY(0%);
+//     }
+// }
 @keyframes slide_from_bottom {
-    0% {
+    from {
         transform: translateY(-100%);
-
+        opacity: 0;
     }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
-    100% {
-        transform: translateY(0%);
+@keyframes slide_to_top {
+    from {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-50%);
+        opacity: 0;
     }
 }
 
 
-// card_promo
+//card promo
 #card_promo {
     width: 80%;
     height: 50vh;
@@ -651,6 +714,7 @@
     animation-name: slide_from_bottom;
     animation-duration: 1s;
     color: white;
+    z-index: 1;
 
 }
 
@@ -677,6 +741,7 @@
     animation-name: slide_from_bottom;
     animation-duration: 1s;
     color: rgb(0, 0, 0);
+    z-index: 1;
 }
 
 #pizza_familia button {
@@ -701,7 +766,7 @@
     display: none;
     animation-name: slide_from_bottom;
     animation-duration: 1s;
-
+    z-index: 1;
     color: white;
 }
 
@@ -728,6 +793,7 @@
     animation-duration: 1s;
     color: white;
     display: none;
+    z-index: 1;
 }
 
 #entrega_pizza button {
@@ -807,9 +873,24 @@ transition: 0.3s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgb(255, 255, 255);
+    // border: 1px solid rgb(255, 255, 255);
     width: 80%;
     height: 70%;
     margin: 0 auto;
     color: white;
+    overflow-y: auto;
+    flex-wrap: wrap;
+}
+.row{
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+.col{
+    width: 32%;
+    height: 50vh;
+}
+#op_selecioados img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
 }

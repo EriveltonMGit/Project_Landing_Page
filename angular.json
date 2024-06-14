@@ -16,6 +16,7 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
+          
           "options": {
             "outputPath": "dist/landing_page_churascaria",
             "index": "src/index.html",
@@ -113,4 +114,5 @@
   "cli": {
     "analytics": "0fb78ccb-1170-44b8-a435-a60302f16a24"
   }
+  
 }
