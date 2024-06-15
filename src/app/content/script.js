@@ -192,18 +192,18 @@ function fecharCards() {
 
     if (fatia_pizza.style.display == 'flex' || promo.style.display == 'flex' ||
         pizza_familia.style.display == 'flex' || combo_pizza.style.display == 'flex'
-        ||  entrega_pizza.style.display == 'flex'
+        || entrega_pizza.style.display == 'flex'
     ) {
         fatia_pizza.style.display = 'none'
         promo.style.display = 'none'
         pizza_familia.style.display = 'none'
         combo_pizza.style.display = 'none'
-        entrega_pizza.style.display  = 'none'
-      
+        entrega_pizza.style.display = 'none'
 
-        
+
+
     }
-   
+
 }
 
 
@@ -387,3 +387,81 @@ function entrega_pizza_close() {
         entrega_pizza.style.display = 'flex'
     }
 }
+
+
+// ___________ANIMAÇÃO CARD MENU___________-
+
+function bifes() {
+    let bifes_card = document.getElementById(`bifes_card`).style.display = 'flex'
+    let costela_card = document.getElementById(`costelas_card`).style.display = 'none'
+    let frango_card = document.getElementById(`frango_card`).style.display = 'none'
+    let sobremesas_card = document.getElementById(`sobremesas_card`).style.display = 'none'
+     let bebidas_card = document.getElementById(`bebidas_card`).style.display = 'none'
+
+}
+
+function costelas() {
+    let costela_card = document.getElementById(`costelas_card`).style.display = 'flex'
+    let bifes_card = document.getElementById(`bifes_card`).style.display = 'none'
+    let frango_card = document.getElementById(`frango_card`).style.display = 'none'
+    let sobremesas_card = document.getElementById(`sobremesas_card`).style.display = 'none'
+     let bebidas_card = document.getElementById(`bebidas_card`).style.display = 'none'
+
+}
+
+function frango() {
+    let frango_card = document.getElementById(`frango_card`).style.display = 'flex'
+    let bifes_card = document.getElementById(`bifes_card`).style.display = 'none'
+    let costela_card = document.getElementById(`costelas_card`).style.display = 'none'
+    let sobremesas_card = document.getElementById(`sobremesas_card`).style.display = 'none'
+     let bebidas_card = document.getElementById(`bebidas_card`).style.display = 'none'
+
+}
+
+function sobremesas() {
+    let sobremesas_card = document.getElementById(`sobremesas_card`).style.display = 'flex'
+    let bifes_card = document.getElementById(`bifes_card`).style.display = 'none'
+    let costela_card = document.getElementById(`costelas_card`).style.display = 'none'
+    let frango_card = document.getElementById(`frango_card`).style.display = 'none'
+     let bebidas_card = document.getElementById(`bebidas_card`).style.display = 'none'
+}
+
+function bebidas(){
+    let bebidas_card = document.getElementById(`bebidas_card`).style.display = 'flex'
+    let sobremesas_card = document.getElementById(`sobremesas_card`).style.display = 'none'
+    let bifes_card = document.getElementById(`bifes_card`).style.display = 'none'
+    let costela_card = document.getElementById(`costelas_card`).style.display = 'none'
+    let frango_card = document.getElementById(`frango_card`).style.display = 'none'
+}
+
+
+// MUDDAR ICON HEART
+
+
+document.getElementById('heart').addEventListener('click', function() {
+    this.classList.toggle('red');
+});
+
+// ANIMAÃO COMPARILHAMNETO
+
+const shareButtons = document.querySelectorAll('#shareButton');
+// Itera sobre cada botão e adiciona o evento de clique
+shareButtons.forEach(button => {
+    button.addEventListener('click', async () => {
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: 'Título do Site',
+                    text: 'Confira este site incrível!',
+                    url: 'https://landingchurascaria.netlify.app/'
+                });
+                console.log('Compartilhamento bem-sucedido');
+            } catch (error) {
+                console.error('Erro ao compartilhar:', error);
+            }
+        } else {
+            // Fallback para navegadores que não suportam a API de Compartilhamento da Web
+            alert('A API de compartilhamento não é suportada neste navegador. Por favor, copie e cole o link manualmente: https://landingchurascaria.netlify.app/');
+        }
+    });
+});
