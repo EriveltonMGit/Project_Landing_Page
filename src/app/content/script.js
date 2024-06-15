@@ -465,3 +465,21 @@ shareButtons.forEach(button => {
         }
     });
 });
+
+
+// ______________-ANIMAÇÃO MENU DEVICE___________
+
+function abrirMenu_device() {
+    let ul_header_principal_device = document.getElementById(`ul_header_principal_device`)
+
+   
+    if (ul_header_principal_device.style.display === 'none' || ul_header_principal_device.style.display === '') {
+
+        ul_header_principal_device.style.display = 'flex'
+        
+    }
+    else{
+        ul_header_principal_device.style.display = 'none'  
+    }
+}
+
